@@ -8,7 +8,7 @@ export class MailService {
     constructor(private _mailerService: MailerService) { }
 
     sendContactEmail(sendEmailDto: SendEmailDto) {
-        const text = `EMAIL DE CONTATO: ${sendEmailDto.from} \n\n ${sendEmailDto.text}`
+        const text = `<b>EMAIL DE CONTATO:</b>${sendEmailDto.from}\n\n${sendEmailDto.text}`
         this._mailerService.sendMail({
             to: process.env.TO_GMAIL,
             subject: "NOVO CONTATO VIA WEBSITE",
