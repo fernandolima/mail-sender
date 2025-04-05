@@ -13,6 +13,7 @@ export class MailService {
             to: process.env.TO_GMAIL,
             subject: "NOVO CONTATO VIA WEBSITE",
             text: text,
+            html: text,
         })
     }
 }
